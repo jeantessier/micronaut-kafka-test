@@ -5,9 +5,13 @@ import io.micronaut.configuration.kafka.annotation.KafkaKey
 import io.micronaut.configuration.kafka.annotation.Topic
 
 @KafkaClient
-interface EventProducer {
+abstract class EventProducer {
 
     @Topic("micronaut.kafka.test.events")
-    def send(@KafkaKey String key, Event event)
+    abstract send(@KafkaKey String key, Event event)
+
+    def send(Event event) {
+        send(event.getClass().name, event)
+    }
 
 }
