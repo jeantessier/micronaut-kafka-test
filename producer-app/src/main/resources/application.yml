@@ -1,4 +1,8 @@
+---
 micronaut:
-  application:
-    name: producerApp
-kafka.bootstrap.servers: localhost:9092
+    application:
+        name: producerApp
+---
+kafka:
+    bootstrap:
+        servers: localhost:9092
