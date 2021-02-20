@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: consumer.app
+testFramework: spock
+sourceLanguage: groovy
+buildTool: gradle
+features: [app-name, gradle, groovy, groovy-application, http-client, kafka, logback, netty-server, readme, shade, spock, yaml]
