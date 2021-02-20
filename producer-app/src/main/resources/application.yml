@@ -2,6 +2,9 @@
 micronaut:
     application:
         name: producerApp
+jackson:
+    serialization:
+        writeDatesAsTimestamps: false
 ---
 kafka:
     bootstrap:
