@@ -11,6 +11,10 @@ You can start the message producer with the following command:
 
     $ (cd producer-app && ./gradlew run)
 
+You can start one or more message consumers with the following command:
+
+    $ (cd consumer-app && ./gradlew run)
+
 Just hit Ctrl-C in each shell to stop it when you're done.
 
 ## To Trigger a Message
@@ -20,3 +24,18 @@ Just hit Ctrl-C in each shell to stop it when you're done.
 or
 
     $ http :8080 name=="Jean Tessier"
+
+## Topics
+
+The application will automatically create the `micronaut.kafka.test.events`
+topic, but with a single partition.  This means that no matter how many
+consumers you start, all messages will go to only one of them (usually the last
+one to start).
+
+You can add partitions with:
+
+    $ kafka-topics.sh \
+        --zookeeper localhost:2181 \
+        --alter \
+        --topic micronaut.kafka.test.events \
+        --partitions 5
