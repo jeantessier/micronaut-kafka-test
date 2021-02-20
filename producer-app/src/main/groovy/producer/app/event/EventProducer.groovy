@@ -11,7 +11,7 @@ abstract class EventProducer {
     abstract send(@KafkaKey String key, Event event)
 
     def send(Event event) {
-        send(event.getClass().name, event)
+        send(System.currentTimeMillis() as String, event)
     }
 
 }
