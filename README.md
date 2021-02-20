@@ -5,6 +5,8 @@ This is a simple test of the `micronaut-kafka` integration.
 It has a simple producer that writes to a topic.  It has a simple consumer that
 reads from this topic.
 
+Inspired by [this Micronaut presentation](https://youtu.be/6jL1RPdVm2w).
+
 ## To Run
 
 You can start the message producer with the following command:
