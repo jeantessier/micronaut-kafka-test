@@ -9,7 +9,6 @@ group = "consumer.app"
 
 repositories {
     mavenCentral()
-    jcenter()
 }
 
 micronaut {
@@ -38,6 +37,3 @@ java {
     sourceCompatibility = JavaVersion.toVersion("1.8")
     targetCompatibility = JavaVersion.toVersion("1.8")
 }
-
-
-
