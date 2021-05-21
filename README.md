@@ -21,18 +21,26 @@ Just hit Ctrl-C in each shell to stop it when you're done.
 
 ## To Trigger a Message
 
-    $ http :8080
+    $ http :8080/hello/event
 
 or
 
-    $ http :8080 name=="Jean Tessier"
+    $ http :8080/hello/string
+
+## To Trigger a Message With a Parameter
+
+    $ http :8080/hello/event name=="Jean Tessier"
+
+or
+
+    $ http :8080/hello/string name=="Jean Tessier"
 
 ## Topics
 
-The application will automatically create the `micronaut.kafka.test.events`
-topic, but with a single partition.  This means that no matter how many
-consumers you start, all messages will go to only one of them (usually the last
-one to start).
+The application will automatically create the `micronaut.kafka.test.events` and
+`micronaut.kafka.test.strings` topics, but with a single partition.  This means
+that no matter how many consumers you start, all messages will go to only one of
+them (usually the last one to start).
 
 You can add partitions with:
 
