@@ -4,7 +4,7 @@ import io.micronaut.http.MediaType
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 
-import javax.inject.*
+import jakarta.inject.*
 
 import producer.app.event.Event
 import producer.app.event.EventProducer
