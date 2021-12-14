@@ -1,7 +1,7 @@
 plugins {
     id("groovy")
     id("com.github.johnrengelman.shadow") version "7.1.0"
-    id("io.micronaut.application") version "3.0.0"
+    id("io.micronaut.application") version "3.0.2"
 }
 
 version = "0.1"
@@ -24,7 +24,7 @@ dependencies {
     implementation("io.micronaut:micronaut-http-client")
     implementation("io.micronaut.groovy:micronaut-runtime-groovy")
     implementation("io.micronaut.kafka:micronaut-kafka")
-    implementation("javax.annotation:javax.annotation-api")
+    implementation("jakarata-annotation:jakarata-annotation-api")
     compileOnly("io.micronaut:micronaut-http-validation")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
