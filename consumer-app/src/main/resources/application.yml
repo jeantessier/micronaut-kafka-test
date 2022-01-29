@@ -4,6 +4,10 @@ micronaut:
         name: consumerApp
     server:
         port: -1
+netty:
+  default:
+    allocator:
+      max-order: 3
 ---
 kafka:
     bootstrap:

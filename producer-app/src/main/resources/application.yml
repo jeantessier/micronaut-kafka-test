@@ -2,6 +2,10 @@
 micronaut:
     application:
         name: producerApp
+netty:
+  default:
+    allocator:
+      max-order: 3
 jackson:
     serialization:
         writeDatesAsTimestamps: false
