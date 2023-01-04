@@ -9,6 +9,10 @@ Inspired by [this Micronaut presentation](https://youtu.be/6jL1RPdVm2w).
 
 ## To Run
 
+You can start Kafka with Docker Compose:
+
+    $ docker compose up -d
+
 You can start the message producer with the following command:
 
     $ (cd producer-app && ./gradlew run)
@@ -17,7 +21,8 @@ You can start one or more message consumers with the following command:
 
     $ (cd consumer-app && ./gradlew run)
 
-Just hit Ctrl-C in each shell to stop it when you're done.
+Just hit Ctrl-C in each shell to stop it when you're done.  You  can stop Kafka
+with `docker compose stop`.
 
 ## To Trigger a Message
 
@@ -44,8 +49,9 @@ them (usually the last one to start).
 
 You can add partitions with:
 
-    $ kafka-topics.sh \
-        --zookeeper localhost:2181 \
+    $ docker compose exec kafka \
+        /opt/bitnami/kafka/bin/kafka-topics.sh \
+        --bootstrap-server kafka:9092 \
         --alter \
         --topic micronaut.kafka.test.events \
         --partitions 5
