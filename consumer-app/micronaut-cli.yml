@@ -3,4 +3,4 @@ defaultPackage: consumer.app
 testFramework: spock
 sourceLanguage: groovy
 buildTool: gradle
-features: [app-name, gradle, groovy, groovy-application, http-client-test, kafka, logback, micronaut-aot, micronaut-build, netty-server, properties, readme, serialization-jackson, shade, spock, test-resources]
+features: [app-name, gradle, groovy, groovy-application, http-client-test, kafka, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, spock, test-resources]
