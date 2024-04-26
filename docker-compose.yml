@@ -1,5 +1,3 @@
-version: '3.7'
-
 #
 # Run Kafka with KRaft instead of a separate ZooKeeper.
 # Cf. https://hub.docker.com/r/bitnami/kafka
