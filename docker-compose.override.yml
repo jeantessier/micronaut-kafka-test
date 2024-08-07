@@ -1,0 +1,9 @@
+#
+# docker compose up -d
+#
+
+services:
+
+  kafka:
+    ports:
+      - "9092:9092"
