@@ -43,14 +43,14 @@ or
 ## Topics
 
 The application will automatically create the `micronaut.kafka.test.events` and
-`micronaut.kafka.test.strings` topics, but with a single partition.  This means
-that no matter how many consumers you start, all messages will go to only one of
-them (usually the last one to start).
+`micronaut.kafka.test.strings` topics, but each with a single partition.  This 
+means that no matter how many consumers you start, all messages will go to only
+one of them (usually the last one to start).
 
 You can add partitions with:
 
     $ docker compose exec kafka \
-        /opt/bitnami/kafka/bin/kafka-topics.sh \
+        /opt/kafka/bin/kafka-topics.sh \
         --bootstrap-server kafka:9092 \
         --alter \
         --topic micronaut.kafka.test.events \
